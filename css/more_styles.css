@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
+
+body {
+    background-color: orange;
+    font-family: 'Chilanka', sans-serif;
+    font-size: 16px;
+}
+
+/* Card Styles */
+
+.card:nth-child(even) {
+    border-radius: 15px;
+    box-shadow: 4px 8px 5px rgba(0, 0, 0, .75),
+                -16px 16px 48px #000;
+    background: purple;
+}
+.card:nth-child(odd) {
+    border-radius: 15px;
+    box-shadow: inset 8px 8px 10px #000,
+                inset -1px 0 5px #000;
+    background: green;
+    color: whitesmoke;
+}
+.card:nth-child(-n + 3) {
+    margin-top: 32px;
+}
+.card-text {
+    color: darkgrey;
+}
+
+/* Modal Styles */
+
+.modal, .modal-info-container, .modal-btn-container, .modal-text {
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
+}
+.modal-info-container {
+    margin-bottom: -12px;
+}
+.modal-info-container:nth-child(even) {
+    border: 2px solid purple;
+}
+.modal-info-container:nth-child(odd) {
+    border: 2px solid green;
+}
+.modal-info-container:nth-child(even) .modal-img {
+    border: 2px solid purple;
+}
+.modal-info-container:nth-child(odd) .modal-img {
+    border: 2px solid green;
+}
+.modal-info-container:nth-child(even) hr {
+    background-color: purple;
+}
+.modal-info-container:nth-child(odd) hr {
+    background-color: green;
+}
+.modal-btn-container {
+    padding-top: 16px;
+    background: radial-gradient(ellipse at top, 
+                              rgba(129, 15, 129, 0.6) 15%, 
+                              rgba(134, 10, 134, 0.6) 35%, 
+                              rgba(126, 10, 126, 0.6) 55%, 
+                              transparent 75%, 
+                              rgba(0, 128, 0, 0.678)),
+                orangered;
+    box-shadow: 5px 5px 50px black,
+                -5px 5px 50px black;
+}
+
+/* Search Bar */
+
+.search-input, .search-submit {
+    border-radius: 5px;
+    height: 2.5em;
+    background: #ffbe46;
+    border: .5px solid black;
+}
+.search-input {
+    width: 14em;
+    margin-right: 4px;
+}
+.search-submit {
+    width: 2.5em;
+}

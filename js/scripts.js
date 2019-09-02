@@ -117,22 +117,15 @@ Date of Last Modification: 02/09/2019
     /**
      * Helper | Nested in openModalOnCardClick
      * Adds event listener to modal container close button
-     * @param {header element} header h3 element's text content
-     * @param {DOMTokenList} list List of employee cards to add listener to 
      */
-    function closeModalOnXClick (header, list) {
-        list.each(function () {
-            if (header === $(this).attr('id')) {
-                $(this).parent().css('display', "block");
-                $('.modal-container').css('display', "block");
-                $('#modal-close-btn').on('click', function () {
-                    $('.modal-container').css('display', "none");
-                    const $active = $('.modal-info-container').filter(function () {return $(this).css('display') === "block"}).first();
-                    $active.css('display', "none");
-                });
-            };
+    function closeModalOnXClick () {
+        $('#modal-close-btn').on('click', function () {
+            $('.modal-container').css('display', "none");
+            const $active = $('.modal-info-container').filter(function () {return $(this).css('display') === "block"}).first();
+            $active.css('display', "none");
         });
-    }
+    };
+
     /**
      * Helper | Nested in modalLeftRightArrowFilter & modalClickThroughFilter
      * Moves back and forth through modal employee cards
@@ -145,7 +138,7 @@ Date of Last Modification: 02/09/2019
         const $reference = list.index($employee);
         if (list.eq($reference).children().eq(1).text() !== list[ordinal]().children().eq(1).text()) {
             $employee.css('display', "none");
-            list.eq($reference + number).fadeIn(500).css('display', "block");
+            list.eq($reference + number).fadeIn(1000).css('display', "block");
         }
     }
 
@@ -180,10 +173,16 @@ Date of Last Modification: 02/09/2019
      * Adds event listener to employee cards so that a corresponding modal card becomes visible on click
      */
     function openModalOnCardClick () {
-        $('.card').on('click', function () {
+        $('.card').on('click', function (e) {
             const $h3 = $(this).children().eq(1).children().eq(0).attr('id');
             const $modals = $('.modal-info-container h3');
-            closeModalOnXClick($h3, $modals);
+            $modals.each(function () {
+                if ($h3 === $(this).attr('id')) {
+                    $(this).parent().css('display', "block");
+                    $('.modal-container').fadeIn(500).css('display', "block");
+                }
+            });
+            closeModalOnXClick();
         });
     }
     /**
