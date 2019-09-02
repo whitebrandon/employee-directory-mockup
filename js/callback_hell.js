@@ -5,6 +5,10 @@ Name: Brandon White
 Date of Last Modification: 02/09/2019
 ******************************************/
 
+/****************************************************************************************************************
+ This version of the Public API Requests is meant purely as a challenge for myself | Before tackling this project using Promises and Async/Await I wanted to make sure I could follow the logic of a continuation-passing style of coding.
+****************************************************************************************************************/
+
 'use strict';   
 
     /**
