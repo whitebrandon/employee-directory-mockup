@@ -8,6 +8,9 @@ body {
 
 /* Card Styles */
 
+.card {
+    padding: 16px 0px;
+}
 .card:nth-child(even) {
     border-radius: 15px;
     box-shadow: 4px 8px 5px rgba(0, 0, 0, .75),
@@ -26,6 +29,12 @@ body {
 }
 .card-text {
     color: darkgrey;
+}
+.card:nth-child(odd) .card-img {
+    box-shadow: 5px 5px 16px #000;
+}
+.card:nth-child(even) .card-img {
+    box-shadow: -5px -5px 16px #000;
 }
 
 /* Modal Styles */
@@ -56,6 +65,9 @@ body {
 .modal-info-container:nth-child(odd) hr {
     background-color: green;
 }
+.modal-close-btn {
+    padding-top: 6px;
+}
 .modal-btn-container {
     padding-top: 16px;
     background: radial-gradient(ellipse at top, 
@@ -67,6 +79,9 @@ body {
                 orangered;
     box-shadow: 5px 5px 50px black,
                 -5px 5px 50px black;
+}
+.modal-btn-container .btn {
+    padding-top: 16px;
 }
 
 /* Search Bar */
