@@ -2,7 +2,7 @@
 Treehouse Techdegree:
 FSJS project 5 - Public API Requests
 Name: Brandon White
-Date of Last Modification: 02/09/2019
+Date of Last Modification: 29/09/2019
 ******************************************/
 
 'use strict';
