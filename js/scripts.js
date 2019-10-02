@@ -2,7 +2,7 @@
 Treehouse Techdegree:
 FSJS project 5 - Public API Requests
 Name: Brandon White
-Date of Last Modification: 02/09/2019
+Date of Last Modification: 29/09/2019
 ******************************************/
 
 'use strict';
@@ -73,7 +73,7 @@ Date of Last Modification: 02/09/2019
         const $modalCityPar = $('<p>').addClass('modal-text cap').text(user.location.city);
         const $modalhr = $('<hr>');
         const $modalPhonePar = $('<p>').addClass('modal-text').text(user.phone);
-        const $modalLocationPar = $('<p>').addClass('modal-text cap').text(`${user.location.street}, ${user.location.city}, ${stateAbbr[user.location.state]} ${user.location.postcode}`);
+        const $modalLocationPar = $('<p>').addClass('modal-text cap').text(`${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${stateAbbr[user.location.state.toLowerCase()]} ${user.location.postcode}`);
         const $modalDOBPar = $('<p>').addClass('modal-text').text(`Birthday: ${user.dob.date.substring(0, 10)}`);
         appendMultiples($modalContainer, $modalImg, $modalh3, $modalEmailPar, $modalCityPar, $modalhr, $modalPhonePar, $modalLocationPar, $modalDOBPar);
         $('.modal').append($modalContainer);
